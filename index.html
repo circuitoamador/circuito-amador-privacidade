@@ -1,5 +1,5 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Política de Privacidade do aplicativo Circuito Amador"><title>Política de Privacidade | Circuito Amador</title><style>:root{font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#eaf2ff;background:#06142b}*{box-sizing:border-box}body{margin:0;line-height:1.7}header{background:#081d40 url('banner.png') center/cover no-repeat;min-height:230px;display:flex;align-items:end}header div{width:100%;padding:50px max(20px,calc((100vw - 850px)/2));background:linear-gradient(transparent,#06142b)}h1{font-size:clamp(30px,5vw,44px);line-height:1.2;margin:0}header p{color:#ffcf24;font-weight:700;margin:8px 0}main{max-width:900px;margin:auto;padding:20px 24px 65px}article{background:#0d2445;border:1px solid #25486e;border-radius:20px;padding:clamp(20px,4vw,42px)}h2{color:#ffd12c;font-size:21px;margin-top:32px}p,li{color:#e2eaf6}a{color:#ffdb58}small,footer{color:#a8bcd4}.notice{border-left:4px solid #ffd12c;background:#183458;padding:14px 18px;border-radius:6px}footer{text-align:center;padding:24px}strong{color:#fff}@media(max-width:600px){header{min-height:180px}main{padding:10px 12px 40px}}</style></head><body><header><div><p>CIRCUITO AMADOR · FUTEBOL E FUTSAL</p><h1>Política de Privacidade</h1></div></header><main><article>
-<p><strong>Última atualização:</strong> 18 de novembro de 2026<br><strong>Versão de referência do aplicativo:</strong> 4.0.1</p>
+<p><strong>Última atualização:</strong> 23 de novembro de 2026<br><strong>Versão de referência do aplicativo:</strong> 4.0.2</p>
 <p>Esta Política de Privacidade explica quais informações são utilizadas pelo aplicativo <strong>Circuito Amador</strong>, voltado ao acompanhamento de resultados, jogos, classificações, equipes, atletas, votações e estatísticas de competições de futebol e futsal amador. O projeto é divulgado por <strong>Simão Dias Zueiro (SDZO)</strong>.</p>
 <div class="notice"><strong>Importante:</strong> o Circuito Amador <strong>não disponibiliza documentos oficiais de identificação</strong> de atletas ou equipes, como RG, CPF, certidões ou documentos de registro. As informações esportivas apresentadas não têm valor de identificação oficial.</div>
 <h2>1. Quais informações aparecem no aplicativo?</h2>
@@ -15,14 +15,16 @@
 <li><strong>Votação nas partidas:</strong> quando o usuário vota em uma enquete disponível, são registrados a partida, a opção escolhida, o identificador da instalação e a data do registro.</li>
 </ul>
 <p>Esses identificadores não exigem cadastro com nome, e-mail ou CPF, mas podem ser considerados dados pessoais ou dados relacionados ao usuário conforme o contexto.</p>
-<h2>3. Informações mantidas apenas no aparelho</h2>
-<p>Algumas preferências, como tema visual, preferências de notificações, escolhas de partidas a ignorar e registros locais de votos, podem ser armazenadas no próprio dispositivo para manter a experiência de uso. Essas preferências locais não significam, por si só, que todas elas sejam transmitidas ao servidor.</p>
+<h2>3. Preferências e funcionamento das notificações</h2>
+<p>Quando você permite notificações, o aplicativo registra o token push e a plataforma do aparelho. As suas preferências de avisos, como tipos de eventos selecionados, filtros por modalidade e partidas ignoradas, ficam no aparelho e são sincronizadas com o Supabase para aplicar suas escolhas antes do envio. O tema visual e o registro local de que um voto já foi feito permanecem no aparelho.</p>
+<p>Nas configurações do aplicativo, você pode ajustar os avisos de início do primeiro e do segundo tempo, intervalo, disputa de pênaltis, fim de jogo, gols, cartões amarelos e vermelhos e palpites certos. As opções de modalidade e de partida aplicam-se aos avisos configuráveis de status, eventos e palpites. Avisos de classificação para a próxima fase e outros comunicados do aplicativo podem seguir regras próprias de envio. Você pode bloquear todas as notificações do Circuito Amador nas configurações do Android ou iOS.</p>
+<p>Para o aviso <strong>“Na mosca!”</strong>, o aplicativo associa o identificador da instalação usado na votação ao cadastro de push do aparelho. Quando uma partida é finalizada, o servidor compara o voto com o resultado e seleciona somente as instalações que acertaram e estão habilitadas para receber o aviso. Em partidas decididas nos pênaltis, vale o vencedor da disputa. Em partidas encerradas empatadas sem pênaltis, vale o voto em empate. A mensagem informa o confronto e que o palpite foi correto, podendo aparecer na tela bloqueada, dependendo das configurações do aparelho.</p>
 <h2>4. Para quais finalidades utilizamos os dados?</h2>
 <ul>
 <li>Exibir e manter atualizados jogos, resultados e estatísticas de futebol e futsal amador.</li>
 <li>Permitir votações esportivas, contabilizar escolhas e limitar participações repetidas por instalação.</li>
 <li>Verificar versões do aplicativo e apresentar avisos sobre atualizações.</li>
-<li>Enviar notificações sobre partidas, resultados e comunicados, quando autorizadas pelo usuário.</li>
+<li>Enviar notificações sobre partidas, resultados, classificação, acertos em enquetes e comunicados, quando autorizadas no aparelho.</li>
 <li>Manter o funcionamento, a integridade operacional e a segurança do serviço.</li>
 <li>Analisar e atender pedidos de correção ou exercício de direitos relacionados a dados pessoais.</li>
 </ul>
@@ -30,9 +32,9 @@
 <h2>5. Prestadores de serviços e transferências de dados</h2>
 <p>Utilizamos prestadores de tecnologia para operar o aplicativo, incluindo:</p>
 <ul>
-<li><strong>Supabase:</strong> armazenamento e consulta de dados esportivos, identificadores de instalação, registros de versão, votos e tokens de notificações.</li>
+<li><strong>Supabase:</strong> armazenamento e consulta de dados esportivos, identificadores de instalação, registros de versão, votos, tokens de notificações, preferências sincronizadas e vínculo entre a instalação e o cadastro de push.</li>
 <li><strong>Expo Push Service:</strong> processamento dos tokens e das mensagens necessárias para encaminhar notificações aos serviços de entrega.</li>
-<li><strong>Google Firebase Cloud Messaging (FCM) e Firebase Installations:</strong> serviços Android usados para identificação técnica de instalações e entrega de notificações.</li>
+<li><strong>Google Firebase Cloud Messaging (FCM) e Firebase Installations:</strong> serviços Android usados para identificação técnica de instalações e entrega de notificações. No iOS, a entrega de push usa o Apple Push Notification service (APNs).</li>
 </ul>
 <p>Esses prestadores podem receber e processar dados técnicos necessários à execução de suas funções, conforme suas condições de serviço e privacidade. Dependendo da infraestrutura, determinados tratamentos podem ocorrer fora do Brasil, observadas as normas aplicáveis.</p>
 <p><strong>Não comercializamos dados pessoais de usuários</strong> e não identificamos utilização dos dados descritos nesta política para redes de anúncios comportamentais. O uso de prestadores operacionais não deve ser confundido com a venda de dados ou com divulgação pública de identificadores técnicos.</p>
